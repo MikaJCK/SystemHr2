@@ -1,0 +1,27 @@
+This collection of files is a basis for systemprogramming course at LUT-university.
+
+my-cat.c
+my-cat.c is an imitation of the cat command of linux systems. The idea is that the same way
+you can use cat to print out a contents of a file, you can use ./my-cat [file1] [file2]...[fileN]
+to do the same thing. my-cat.c prints out the files in order from left to right.
+Usage: ./my-cat [file1] [file2]...[fileN]
+Errors: no file given, error opening file
+
+
+my-grep.c
+my-grep much like the my-cat is an imitation of grep. 
+It is used to find lines with given word or expression in a file or input. my-grep can be run 
+without a file to look through in which case userinput will be taken. Userinput is given 
+line by line and is ended with empty line(just an enter press) after which the whole group of lines given will be gone through for the lines with given expression.
+Usage: ./my-grep searched_expression {[file]}
+Errors: error opening file, error creating a structure 
+
+my-zip.c
+my-zip.c is a simple compression program that uses run-lenght coding to compress. the program itself will compress the given file into 5byte sized entries which have 4 byte integer that tells how many of the following 1 byte character there are at that point in the program.
+Usage: ./my-unzip file >file.z
+Errors:
+
+my-unzip.c
+my-unzip is the mirror of my-zip.c program. It uncompresses the program the opposite of the zip program. 
+Usage: ./my-unzip File_to_be_uncompressed
+Errors:
